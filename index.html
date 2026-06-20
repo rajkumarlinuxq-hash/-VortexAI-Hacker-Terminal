@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VortexAI Terminal | Operational Bash Console</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;800&display=swap">
+    <style>
+        body { background: #030305; color: #00ffcc; font-family: monospace; padding: 30px 15px; text-align: center; }
+        .container { max-width: 500px; margin: auto; background: #000; padding: 25px; border-radius: 15px; border: 1px solid #00ffcc; box-shadow: 0 0 20px rgba(0,255,204,0.1); }
+        .terminal-box { text-align: left; background: #050505; padding: 15px; border-radius: 10px; border: 1px solid #222; font-size: 0.85rem; line-height: 1.6; min-height: 180px; margin-bottom: 15px; }
+        .btn { background: #00ffcc; color: #000; padding: 12px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; width: 100%; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="font-family:'Plus Jakarta Sans'; color:#fff;">💀 Cyber Core Terminal Simulator</h2>
+        <p style="color: #666; font-size: 0.8rem; margin-top: -10px;">Educational sequence array scripts loaded dynamically.</p>
+        
+        <div style="border: 1px dashed #00ffcc; padding: 8px; font-size: 10px; margin-bottom: 15px;">[💰 AD REVENUE TERMINAL PLACEHOLDER]</div>
+
+        <div class="terminal-box" id="termBox"></div>
+
+        <button class="btn" onclick="runRandomCyberCommand()">$ Execute Next Instruction Suite</button>
+        <a href="https://your-main-vidtor-link.vercel.app" style="color: #666; display: block; margin-top: 15px; text-decoration: none; font-size: 0.8rem;">⬅️ Exit Terminal Hub</a>
+    </div>
+
+    <script>
+        const commands = [
+            "<div>$ nmap -sV -sC target-vortex-node.org</div><div style='color:#fff;'>[INFO] Scanning target ports... Ports 80, 443 are open. Tracking SSL certificates.</div>",
+            "<div>$ hashcat -m 0 -a 0 custom_hash.txt wordlist.txt</div><div style='color:#fff;'>[STATUS] Processing structural algorithm... Hash matched dictionary parameter!</div>",
+            "<div>$ hydra -l admin -P passes.txt ssh://192.168.1.1</div><div style='color:#fff;'>[ATTEMPT] Connecting to remote terminal... Secure session authenticated successfully.</div>"
+        ];
+        function runRandomCyberCommand() {
+            document.getElementById('termBox').innerHTML = commands[Math.floor(Math.random() * commands.length)] + `<div style="color:#555; margin-top:15px;">$ _ (Execution Thread Terminated Cleanly)</div>`;
+        }
+        runRandomCyberCommand();
+    </script>
+</body>
+</html>
