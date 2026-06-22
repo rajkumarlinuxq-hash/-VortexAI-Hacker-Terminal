@@ -4,21 +4,68 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5245797342116195" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VortexAI Pro Node Engine</title>
+    <title>VortexAI Advanced Infrastructure Node</title>
     <style>
-        body { background:#070913; color:#e2e8f0; font-family:sans-serif; margin:0; padding:20px; text-align:center; }
-        .rare-box { max-width:800px; margin:30px auto; background:#0f132a; border:1px solid #1e293b; padding:40px; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.5); }
-        h1 { color:#38bdf8; font-size:2.2rem; margin-bottom:10px; }
-        input, select, textarea, button { width:100%; padding:14px; margin:12px 0; border-radius:8px; border:none; box-sizing:border-box; font-size:16px; }
-        input, select, textarea { background:#1e293b; color:#fff; border:1px solid #334155; }
-        button { background:#38bdf8; color:#070913; font-weight:bold; cursor:pointer; transition:0.2s; }
-        button:hover { background:#0ea5e9; transform:translateY(-2px); }
-        .dynamic-output { background:#020617; border:1px dashed #38bdf8; padding:20px; margin-top:20px; border-radius:8px; text-align:left; font-family:monospace; display:none; color:#34d399; max-height:300px; overflow-y:auto; }
+        body { background:#03050a; color:#cbd5e1; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; padding:20px; }
+        .main-container { max-width:1200px; margin:auto; background:#090d16; border:1px solid #1e293b; padding:40px; border-radius:16px; box-shadow:0 20px 50px rgba(0,0,0,0.7); }
+        h1 { color:#38bdf8; font-size:2.6rem; text-align:center; margin-top:0; letter-spacing:1px; }
+        p.subtitle { text-align:center; color:#94a3b8; font-size:1.1rem; margin-bottom:40px; }
+        input, select, textarea { width:100%; padding:15px; margin:15px 0; border-radius:8px; background:#151f32; color:#fff; border:1px solid #2d3d5a; font-size:16px; box-sizing:border-box; }
+        button { width:100%; padding:16px; background:#38bdf8; color:#03050a; font-weight:bold; border:none; border-radius:8px; font-size:17px; cursor:pointer; transition:0.3s ease; }
+        button:hover { background:#0ea5e9; transform:translateY(-2px); box-shadow:0 5px 15px rgba(56,189,248,0.3); }
+        .panel-output { background:#020408; border:1px solid #38bdf8; padding:25px; margin-top:25px; border-radius:10px; text-align:left; font-family:'Courier New', monospace; color:#34d399; max-height:500px; overflow-y:auto; line-height:1.6; }
     </style>
 </head>
 <body>
-    <div class="rare-box">
-        <h1>💻 CORE SYSTEM LOG SHELL</h1><p>Interface emulator for processing diagnostic virtual network logs</p><input type='text' id='tIn' placeholder='Type test command (help, status, system)...'><button onclick='runShell()'>SEND SIGNAL</button><div class='dynamic-output' id='tOut'></div><script>function runShell(){let out=document.getElementById('tOut');out.style.display='block';out.innerHTML='Signal sent to active system stack.<br>Response 200 OK: Process integrated with local node diagnostics.';}</script>
+    <div class="main-container">
+        <h1>💻 NATIVE TERMUX A-Z MASTER COMMANDS SYSTEM</h1>
+<p class='subtitle'>Complete active terminal dictionary mapping configuration lines across real tools execution system.</p>
+<div style='display:grid; grid-template-columns: 1fr 2fr; gap:25px;'>
+    <div style='max-height:500px; overflow-y:auto; background:#020408; padding:15px; border-radius:8px; border:1px solid #1e293b;'>
+        <div style='color:#64748b; font-size:11px; font-weight:bold; margin-bottom:10px;'>A-Z REGISTERED COMMANDS</div>
+        <div id='azList' style='display:flex; flex-direction:column; gap:8px;'></div>
+    </div>
+    <div class='panel-output' id='manualDisplay' style='min-height:400px;'>Click any native utility token array command on the left to unpack raw operational instructions, syntax code arguments, and production deployment setups.</div>
+</div>
+<script>
+    const azCommands = {
+        'apt-get': 'COMMAND: apt-get [update/upgrade]<br>SYNTAX: Synchronizes local package repository index records with master cloud mirrors.<br>USE: Kept for keeping configuration environments safe from patch drops.',
+        'bash': 'COMMAND: bash [filename.sh]<br>SYNTAX: Native Bourne Again Shell runtime interpreter module script.<br>USE: Executes multi line linear task logic code strings.',
+        'cat': 'COMMAND: cat [target_path]<br>SYNTAX: Concatenates and dumps file system buffers to standard outputs.<br>USE: Inspection of configurations or log outputs.',
+        'chmod': 'COMMAND: chmod [permission_bits] [file]<br>SYNTAX: Changes operational file system state access allocation permissions.<br>USE: chmod +x shifts raw scripts into active executable files.',
+        'curl': 'COMMAND: curl -X GET [target_url]<br>SYNTAX: Transfers raw link payload matrices over protocols like HTTP/HTTPS/FTP.<br>USE: Scrapes index structures or tests cloud endpoints.',
+        'df': 'COMMAND: df -h<br>SYNTAX: Displays disk storage allocation block metrics directly from filesystems.<br>USE: Monitors remaining available environmental caching sizes.',
+        'echo': 'COMMAND: echo "string"<br>SYNTAX: Prints structural arguments and variables onto active monitor logs.<br>USE: Debugging status logs during automated executions.',
+        'find': 'COMMAND: find . -name "*.html"<br>SYNTAX: Scans path variables systematically for targeted structural queries.<br>USE: Locating nested code assets within multi folder trees.',
+        'git': 'COMMAND: git clone [remote_repository_url]<br>SYNTAX: Distributed version control binary client platform context.<br>USE: Downloads and pushes file changes online directly to host accounts.',
+        'grep': 'COMMAND: grep "pattern" [file]<br>SYNTAX: Regular expressions match filter pipeline engine processor.<br>USE: Isolating errors inside messy server logs.',
+        'htop': 'COMMAND: htop<br>SYNTAX: Interactive real-time system tracking monitor visualization.<br>USE: Checks ongoing CPU, active threads, and RAM allocation limits.',
+        'ifconfig': 'COMMAND: ifconfig / ip a<br>SYNTAX: Investigates local network interface loopbacks and adapter states.<br>USE: Locates internal local network address paths.',
+        'ln': 'COMMAND: ln -s [source] [link]<br>SYNTAX: Constructs absolute physical shortcuts across system parameters.<br>USE: Linking deep dependencies without duplications.',
+        'mkdir': 'COMMAND: mkdir [directory_name]<br>SYNTAX: Initializes fresh container directory pathways inside current root.<br>USE: Structural organization of file assets.',
+        'mv': 'COMMAND: mv [source] [destination]<br>SYNTAX: Relocates file system structures or changes object names.<br>USE: Quick directory re-mapping workflows.',
+        'nmap': 'COMMAND: nmap -A [target_ip_address]<br>SYNTAX: Network mapper system exploration blueprint scanner analyzer.<br>USE: Audits port security and target software version flags.',
+        'pkg': 'COMMAND: pkg install [package_name]<br>SYNTAX: Main internal package automation script manager built for Android termux.<br>USE: Easy deployment of tools like python, clang, openssh.',
+        'pwd': 'COMMAND: pwd<br>SYNTAX: Returns the current absolute working directory location reference string.<br>USE: Finding where a cron script is currently running.',
+        'rm': 'COMMAND: rm -rf [target]<br>SYNTAX: Forcefully purges files and recursively drops full directories from structures.<br>USE: Cleaning workspace trash files completely.',
+        'sed': 'COMMAND: sed -i "s/old/new/g" index.html<br>SYNTAX: Stream Editor tool to scan and modify strings directly in files.<br>USE: Used in automation scripts to alter code lines dynamically.',
+        'tar': 'COMMAND: tar -xvf archive.tar.gz<br>SYNTAX: Tape archive unzipping extraction and compression library algorithm.<br>USE: Compacting logs or expanding heavy raw software packs.',
+        'top': 'COMMAND: top<br>SYNTAX: Classic process monitor showing real-time CPU thread consumption lists.<br>USE: Diagnoses background software freezing bottlenecks.',
+        'uname': 'COMMAND: uname -a<br>SYNTAX: Prints absolute system kernel operating build flags.<br>USE: Verifies if code matches current device system architecture.',
+        'vim': 'COMMAND: vim [file_name]<br>SYNTAX: Highly customizable screen based terminal text editing workspace viewer.<br>USE: Modifying deep code rows inside terminal direct channels.',
+        'whoami': 'COMMAND: whoami<br>SYNTAX: Dumps active authentication token session string name parameters.<br>USE: Confirms if terminal session has elevated root permissions.'
+    };
+    
+    let btnHTML = '';
+    for(let cmd in azCommands) {
+        btnHTML += '<button onclick="showManual(\''+cmd+'\')" style="padding:8px 12px; font-size:13px; font-family:monospace; text-align:left; background:#111827; color:#34d399; border:1px solid #1e293b; margin:2px 0;">⚙️ '+cmd+'</button>';
+    }
+    document.getElementById('azList').innerHTML = btnHTML;
+
+    function showManual(key) {
+        document.getElementById('manualDisplay').innerHTML = '<div style="color:#38bdf8; font-weight:bold; font-size:18px; border-bottom:1px solid #1e293b; padding-bottom:10px; margin-bottom:15px;">📚 CORE BINARY INDEX: ' + key.toUpperCase() + '</div>' + azCommands[key];
+    }
+</script>
     </div>
     <div style='margin-top:50px;padding:25px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);border-radius:12px;text-align:center;font-family:sans-serif;'><h4 style='color:#38bdf8;margin-bottom:15px;font-size:14px;letter-spacing:2px;'>🌐 VORTEXAI MULTIVERSE NETWORK</h4><div style='display:flex;flex-wrap:wrap;justify-content:center;gap:15px;font-size:13px;'><a href='https://vidtor-api.vercel.app' target='_blank' style='color:#4895ef;text-decoration:none;font-weight:bold;'>📹 Vidtor AI</a><a href='https://vortex-ai-3-d-animation.vercel.app' target='_blank' style='color:#4895ef;text-decoration:none;font-weight:bold;'>🎨 3D Animation</a><a href='https://vortex-ai-earth-news.vercel.app' target='_blank' style='color:#4895ef;text-decoration:none;font-weight:bold;'>📰 Earth News</a><a href='https://vortex-ai-global-codes.vercel.app' target='_blank' style='color:#4895ef;text-decoration:none;font-weight:bold;'>⚡ Global Codes</a><a href='https://vortex-ai-bypass-downloader.vercel.app' target='_blank' style='color:#4895ef;text-decoration:none;font-weight:bold;'>📥 Bypass Downloader</a><a href='https://vortexai-cyber-portfolio.vercel.app' target='_blank' style='color:#4895ef;text-decoration:none;font-weight:bold;'>🛡️ Cyber Portfolio</a><a href='https://vortex-ai-retro-arcade.vercel.app' target='_blank' style='color:#4895ef;text-decoration:none;font-weight:bold;'>🕹️ Retro Arcade</a><a href='https://vortex-ai-prompt-vault.vercel.app' target='_blank' style='color:#4895ef;text-decoration:none;font-weight:bold;'>🔑 Prompt Vault</a><a href='https://vortex-ai-ghost-mail.vercel.app' target='_blank' style='color:#4895ef;text-decoration:none;font-weight:bold;'>👻 Ghost Mail</a></div></div>
     <div style='margin-top:40px;padding:20px;border-top:1px solid rgba(255,255,255,0.05);font-size:12px;text-align:center;color:#666;font-family:sans-serif;'><p>VortexAI Labs All rights reserved</p><a href='privacy.html' style='color:#4895ef;margin:0 10px;text-decoration:none;'>Privacy Policy</a> | <a href='terms.html' style='color:#4895ef;margin:0 10px;text-decoration:none;'>Terms of Service</a> | <a href='contact.html' style='color:#4895ef;margin:0 10px;text-decoration:none;'>Contact Us</a></div>
